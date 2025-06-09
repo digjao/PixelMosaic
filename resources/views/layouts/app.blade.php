@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@yield('title','PixelMosaic')</title>
+
+  {{-- Vite injeta aqui seu CSS compilado de resources/sass/app.scss --}}
+  @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="{{ url('/') }}">PixelMosaic</a>
+      <div>
+        <a href="{{ url('/galeria') }}">Galeria</a>
+        <a href="{{ url('/sobre') }}">Sobre</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    @yield('content')
+  </main>
+  …
+</body>
+
+</html>
