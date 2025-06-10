@@ -34,17 +34,43 @@
     margin-bottom: 0.5*$gap;
     color: $font-primary;
   }
+  p {
+    color: #000;
+    font-weight: bold;
+  }
+  a {
+    color: #000;
+  }
 }
 
 .hero {
-  background: linear-gradient(135deg, $primary, $secondary);
+  position: relative;
   color: white;
-  padding: 6rem 0;
   text-align: center;
+  padding: 6rem 0;
+  overflow: hidden;
 
-  h1 { font-size: 3rem; margin-bottom: 1rem; }
-  p  { font-size: 1.25rem; margin-bottom: 2rem; }
+
+  background:
+    var(--hero-img) center/cover no-repeat;
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
 }
+
+
 
 .features {
   text-align: center;
@@ -67,7 +93,7 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
 
     h3 { margin-bottom: .5rem; color: $font-primary; }
-    p  { font-size: .95rem; flex-grow: 1; }
+    p  { font-size: .95rem; flex-grow: 1;font-weight: bold; }
   }
 }
 

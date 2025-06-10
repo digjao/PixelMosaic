@@ -58,12 +58,25 @@
   margin-bottom: 0.5rem;
   color: #EEE5E9;
 }
+.sidebar-about p {
+  color: #000;
+  font-weight: bold;
+}
+.sidebar-about a {
+  color: #000;
+}
 
 .hero {
-  background: linear-gradient(135deg, #8AB0AB, #26413C);
+  position: relative;
   color: white;
-  padding: 6rem 0;
   text-align: center;
+  padding: 6rem 0;
+  overflow: hidden;
+  background: var(--hero-img) center/cover no-repeat;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 .hero h1 {
   font-size: 3rem;
@@ -72,6 +85,7 @@
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  font-weight: bold;
 }
 
 .features {
@@ -100,6 +114,7 @@
 .features .feature-item p {
   font-size: 0.95rem;
   flex-grow: 1;
+  font-weight: bold;
 }
 
 .gallery-preview h2 {

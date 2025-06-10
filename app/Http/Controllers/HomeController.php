@@ -12,8 +12,10 @@ class HomeController extends Controller
 
         $photos = array_map(fn($f) => $f->getFilename(), $files);
 
+        $heroPhoto = $photos[6] ?? null;
+
         $previewPhotos = array_slice($photos, 0, 5);
 
-        return view('home', compact('previewPhotos'));
+        return view('home', compact('previewPhotos','heroPhoto'));
     }
 }

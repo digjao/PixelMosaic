@@ -4,17 +4,16 @@
 
 @section('content')
   <div class="home-layout">
-
-      {{-- Sidebar fixa (coluna 2) --}}
     <aside class="sidebar-about">
       <section class="about">
         <div class="about-content">
-          <img src="{{ asset('images/foto-perfil.jpg') }}"
-               alt="Seu Nome"
-               class="about-photo">
+        <img src="{{ asset('images/profile/profileImage.jpg') }}"
+            alt="Foto de Perfil do João Pedro"
+            class="about-photo">
+            <h1>João Pedro Ferreira</h1>
           <div>
             <h2>Sobre Mim</h2>
-            <p>Olá! Eu sou o João Pedro, front-end developer que ama música, filmes e código! Adoro colocar aprendizado em prática como em simples projetos como esse</p>
+            <p>Olá! Eu sou o João Pedro, front-end developer que ama música, filmes e código! Também amo muito meus gatos e por que não fazer um projeto de portfólio mostrando eles para o mundo haha</p>
             <p>
               <a href="https://www.linkedin.com/in/joao-pedro-de-oliveira-ferreira-5795aa215/" target="_blank">LinkedIn</a> •
               <a href="https://github.com/digjao/"   target="_blank">GitHub</a>
@@ -24,41 +23,41 @@
       </section>
     </aside>
 
-    {{-- Conteúdo principal (coluna 1) --}}
     <main class="main-content">
-
-      {{-- Hero --}}
-      <section class="hero">
+      <section 
+        class="hero"
+        @if($heroPhoto)
+          style="--hero-img: url('{{ asset('images/gallery/'.$heroPhoto) }}');"
+        @endif
+      >
         <div class="container">
           <h1>PixelMosaic</h1>
           <p>Um simples projeto apenas para praticar Sass</p>
-          <a href="{{ url('/galeria') }}" class="btn btn-primary">Ver Galeria</a>
+          <a href="{{ url('/galeria') }}" class="btn btn-secondary">Ver Galeria</a>
         </div>
       </section>
-    
-      {{-- Destaques --}}
+
       <section class="features">
        <div class="container-fluid"> 
         <div class="feature-item">
-            <h3>Design Responsivo</h3>
-            <p>Layouts que funcionam em qualquer tela.</p>
+            <h3>Conheça o James</h3>
+            <p>Gato amarelo mais bagunceiro que ja veio a terra</p>
           </div>
           <div class="feature-item">
-            <h3>SCSS Organizado</h3>
-            <p>Arquitetura de estilos modular e reutilizável.</p>
+            <h3>Conheça o Joey</h3>
+            <p>É o extremo oposto do irmão, muito comportado e nao da trabalho</p>
           </div>
           <div class="feature-item">
-            <h3>Performance</h3>
-            <p>Imagens otimizadas e carregamento rápido.</p>
+            <h3>Eles adoram brincar</h3>
+            <p>Correm pela casa a metade do dia</p>
           </div>
           <div class="feature-item">
-            <h3>Performance</h3>
-            <p>Imagens otimizadas e carregamento rápido.</p>
+            <h3>Eles também adoram dormir</h3>
+            <p>Passam a outra metade do dia dormindo pesado</p>
           </div>
         </div> 
       </section>
     
-      {{-- Preview Galeria --}}
       <section class="gallery-preview">
         <div>
           <h2>Algumas imagens</h2>
@@ -73,8 +72,6 @@
           <a href="{{ url('/galeria') }}" class="btn btn-secondary">Ver toda a Galeria</a>
         </div>
       </section>
-
     </main>
-
   </div>
 @endsection
