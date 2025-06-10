@@ -1,0 +1,30 @@
+@use 'variables' as *;
+@use 'mixins'    as *;
+
+.btn {
+  @include flex-center;
+  background: $button-primary;
+  color: #fff;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s;
+
+  &:hover {
+    background: darken($button-primary, 10%);
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  background: #fff;
+  color: $button-primary;
+  border: 2px solid $button-primary;
+
+  &:hover {
+    background: $button-primary;
+    color: #fff;
+  }
+}
+  
