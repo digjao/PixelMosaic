@@ -14,10 +14,10 @@
                class="about-photo">
           <div>
             <h2>Sobre Mim</h2>
-            <p>Olá! Eu sou o João Pedro, front-end developer que ama SCSS, PHP e design gráfico. Aqui compartilho meus melhores trabalhos e fotografias.</p>
+            <p>Olá! Eu sou o João Pedro, front-end developer que ama música, filmes e código! Adoro colocar aprendizado em prática como em simples projetos como esse</p>
             <p>
-              <a href="https://linkedin.com/in/seulink" target="_blank">LinkedIn</a> •
-              <a href="https://github.com/seunome"   target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/joao-pedro-de-oliveira-ferreira-5795aa215/" target="_blank">LinkedIn</a> •
+              <a href="https://github.com/digjao/"   target="_blank">GitHub</a>
             </p>
           </div>
         </div>
@@ -31,14 +31,14 @@
       <section class="hero">
         <div class="container">
           <h1>PixelMosaic</h1>
-          <p>Mostrando meu trabalho através de design gráfico e fotografia.</p>
+          <p>Um simples projeto apenas para praticar Sass</p>
           <a href="{{ url('/galeria') }}" class="btn btn-primary">Ver Galeria</a>
         </div>
       </section>
     
       {{-- Destaques --}}
       <section class="features">
-       <div class="container"> 
+       <div class="container-fluid"> 
         <div class="feature-item">
             <h3>Design Responsivo</h3>
             <p>Layouts que funcionam em qualquer tela.</p>
@@ -60,15 +60,16 @@
     
       {{-- Preview Galeria --}}
       <section class="gallery-preview">
-        <div class="container">
+        <div>
           <h2>Algumas imagens</h2>
-          <div class="gallery">
-            @foreach (['foto1.jpg','foto2.jpg','foto3.jpg','foto4.jpg'] as $img)
-              <div class="gallery-item">
-                <img src="{{ asset('images/' . $img) }}" alt="">
-              </div>
-            @endforeach
+         <div class="gallery">
+        @foreach ($previewPhotos as $photo)
+          <div class="gallery-item">
+            <img src="{{ asset('images/gallery/' . $photo) }}" alt="">
           </div>
+        @endforeach
+          </div>
+
           <a href="{{ url('/galeria') }}" class="btn btn-secondary">Ver toda a Galeria</a>
         </div>
       </section>
