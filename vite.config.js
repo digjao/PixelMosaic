@@ -19,7 +19,7 @@ export default defineConfig({
           dest: 'public/images'
         }
       ],
-      hook: 'writeBundle'
+      hook: 'buildStart'
     }),
   ],
 
