@@ -14,7 +14,7 @@
       <a href="{{ url('/') }}" class="navbar__logo">PixelMosaic</a>
       <div class="navbar__links">
         <a href="{{ url('/galeria') }}">Galeria</a>
-        <a href="{{ url('/sobre') }}">Sobre</a>
+        <a href="{{ url('/') }}">Voltar</a>
       </div>
     </nav>
   </header>
