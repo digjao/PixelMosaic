@@ -16,6 +16,6 @@ class HomeController extends Controller
 
         $previewPhotos = array_slice($photos, 0, 5);
 
-        return view('home', compact('previewPhotos','heroPhoto'));
+        return view('home.index', compact('previewPhotos','heroPhoto'));
     }
 }
