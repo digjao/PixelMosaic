@@ -3,8 +3,8 @@
 
 .btn {
   @include flex-center;
-  background: $button-primary;
-  color: #fff;
+  background: lighten($primary, 10%);
+  color: $font-primary;
   padding: .75rem 1.5rem;
   border-radius: .5rem;
   text-decoration: none;
@@ -12,7 +12,7 @@
   transition: background .2s;
 
   &:hover {
-    background: darken($button-primary, 10%);
+    background: darken($primary, 10%);
   }
 }
 

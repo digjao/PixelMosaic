@@ -33,7 +33,7 @@
         <div class="container">
           <h1>PixelMosaic</h1>
           <p>Um simples projeto apenas para praticar Sass</p>
-          <a href="{{ url('/galeria') }}" class="btn btn-secondary">Ver Galeria</a>
+          <a href="{{ url('/galeria') }}" class="btn ">Ver Galeria</a>
         </div>
       </section>
 
@@ -69,7 +69,7 @@
         @endforeach
           </div>
 
-          <a href="{{ url('/galeria') }}" class="btn btn-secondary">Ver toda a Galeria</a>
+          <a href="{{ url('/galeria') }}" class="btn">Ver toda a Galeria</a>
         </div>
       </section>
     </main>

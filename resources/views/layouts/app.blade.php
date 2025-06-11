@@ -9,10 +9,10 @@
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-  <header>
-    <nav class="container">
-      <a href="{{ url('/') }}">PixelMosaic</a>
-      <div>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="{{ url('/') }}" class="navbar__logo">PixelMosaic</a>
+      <div class="navbar__links">
         <a href="{{ url('/galeria') }}">Galeria</a>
         <a href="{{ url('/sobre') }}">Sobre</a>
       </div>
@@ -25,4 +25,4 @@
   …
 </body>
 
-</html>
+</html> 

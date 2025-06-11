@@ -31,3 +31,42 @@ body {
 .gallery {
   @include grid-gallery;
 }
+
+.site-header {
+  margin-bottom: $gap;
+
+  .navbar {
+    background: $primary;
+    padding: $gap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $font-primary;
+      text-decoration: none;
+    }
+
+    &__links {
+      display: flex;
+      gap: $gap;
+
+      a {
+        background: lighten($primary, 10%);
+        color: $font-primary;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: background 0.2s;
+
+        &:hover {
+          background: darken($primary, 10%);
+        }
+      }
+    }
+  }
+}
+
