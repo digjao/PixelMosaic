@@ -14,28 +14,43 @@ Galeria de fotos simples em Laravel + Vite + Sass.
 ## Pré-requisitos
 
 - PHP ≥ 8.0  
-- Composer  
+- Composer >= 2.8.9
 - Node.js ≥ 16 e NPM (or Yarn)  
-- Extensões PHP: `fileinfo`
+- Extensões PHP: `fileinfo`, `pdo_sqlite`
 
 ## Instalação
 
-1. Clone o repositório  
+1. Clone o repositório.
    ```bash
-   git clone https://github.com/SEU_USUARIO/pixelMosaic.git
-   cd pixelMosaic
+   git clone git@github.com:digjao/PixelMosaic.git
+   cd PixelMosaic
+   ```
 
-2. Instale as dependências PHP e JS
+2. Instale as dependências PHP e JS.
+   ```bash
    composer install
    npm install
+   ```
 
-3. Gere o arquivo de ambiente e a chave Laravel
+3. Gere o arquivo .env e a chave Laravel.
+    ```bash
     cp .env.example .env
     php artisan key:generate
+    ```
 
-4. Inicie o watcher de assets e o servidor PHP
+4. Execute as migrations. O SQLite é o banco utilizado por padrão.
+    ```bash
+    php artisan migrate
+    ```
+
+5. Inicie o watcher de assets.
+    ```bash
     npm run dev
-    php artisan serve
+    ```
 
-5. Abra no navegador
-    http://127.0.0.1:8000
+6. Em outro terminal, inicie o servidor PHP.
+    ```bash
+    php artisan serve
+    ```
+
+5. Abra no navegador http://127.0.0.1:8000.
